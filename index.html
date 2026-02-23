@@ -1,126 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Ataullah Ezatullah</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ataullah Ezatullah</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Orbitron',sans-serif;
+}
 
-        body {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(-45deg, #1e3c72, #2a5298, #6a11cb, #2575fc);
-            background-size: 400% 400%;
-            animation: gradientBG 10s ease infinite;
-            overflow: hidden;
-        }
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: radial-gradient(circle at 20% 20%, #0f2027, #203a43, #2c5364);
+    overflow:hidden;
+    color:white;
+}
 
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+/* Animated Neon Lines */
+body::before{
+    content:"";
+    position:absolute;
+    width:200%;
+    height:200%;
+    background:
+        linear-gradient(rgba(0,255,255,0.15) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,255,255,0.15) 1px, transparent 1px);
+    background-size:50px 50px;
+    animation:moveGrid 10s linear infinite;
+    transform:rotate(0deg);
+}
 
-        .container {
-            text-align: center;
-            position: relative;
-        }
+@keyframes moveGrid{
+    0%{transform:translateY(0);}
+    100%{transform:translateY(50px);}
+}
 
-        h1 {
-            font-size: 4rem;
-            font-weight: 800;
-            color: #ffffff;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            text-shadow: 
-                0 0 10px rgba(255,255,255,0.8),
-                0 0 20px rgba(255,255,255,0.6),
-                0 0 40px rgba(0,255,255,0.6),
-                0 0 80px rgba(0,255,255,0.4);
-            animation: glow 2s ease-in-out infinite alternate;
-        }
+/* Glass Card */
+.card{
+    position:relative;
+    padding:60px 80px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.2);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 0 40px rgba(0,255,255,0.3);
+    animation:float 4s ease-in-out infinite;
+}
 
-        @keyframes glow {
-            from {
-                text-shadow:
-                    0 0 10px #fff,
-                    0 0 20px #00ffff,
-                    0 0 30px #00ffff,
-                    0 0 40px #00ffff;
-            }
-            to {
-                text-shadow:
-                    0 0 20px #fff,
-                    0 0 30px #00ffff,
-                    0 0 40px #00ffff,
-                    0 0 60px #00ffff;
-            }
-        }
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+}
 
-        /* Floating circles */
-        .circle {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.1);
-            animation: float 15s infinite;
-        }
+h1{
+    font-size:3.5rem;
+    letter-spacing:3px;
+    color:#00ffff;
+    text-shadow:0 0 20px #00ffff, 0 0 40px #00ffff;
+    margin-bottom:25px;
+}
 
-        .circle:nth-child(1) {
-            width: 200px;
-            height: 200px;
-            top: 10%;
-            left: 20%;
-        }
+p{
+    font-size:1.1rem;
+    line-height:1.8;
+    color:#e0f7ff;
+    max-width:500px;
+}
 
-        .circle:nth-child(2) {
-            width: 300px;
-            height: 300px;
-            bottom: 15%;
-            right: 15%;
-            animation-duration: 20s;
-        }
-
-        .circle:nth-child(3) {
-            width: 150px;
-            height: 150px;
-            bottom: 30%;
-            left: 10%;
-            animation-duration: 18s;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-30px); }
-            100% { transform: translateY(0px); }
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-        }
-    </style>
+/* Responsive */
+@media(max-width:768px){
+    .card{
+        padding:40px;
+    }
+    h1{
+        font-size:2.2rem;
+    }
+}
+</style>
 </head>
+
 <body>
 
-    <div class="container">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <h1>Ataullah Ezatullah</h1>
-    </div>
+<div class="card">
+    <h1>Ataullah Ezatullah</h1>
+    <p>
+        Life is a journey of growth, discipline, and vision.  
+        Every challenge is a level.  
+        Every failure is data.  
+        Every success is proof that persistence wins.  
+        Build your future. Stay focused. Move forward.
+    </p>
+</div>
 
 </body>
 </html>
