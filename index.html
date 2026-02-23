@@ -8,101 +8,102 @@
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Orbitron',sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
 }
 
-body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: radial-gradient(circle at 20% 20%, #0f2027, #203a43, #2c5364);
-    overflow:hidden;
-    color:white;
+    overflow: hidden;
+    color: white;
 }
 
-body::before{
-    content:"";
-    position:absolute;
-    width:200%;
-    height:200%;
+body::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
     background:
         linear-gradient(rgba(0,255,255,0.15) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0,255,255,0.15) 1px, transparent 1px);
-    background-size:50px 50px;
-    animation:moveGrid 10s linear infinite;
-    transform:rotate(0deg);
+    background-size: 50px 50px;
+    animation: moveGrid 10s linear infinite;
 }
 
-@keyframes moveGrid{
-    0%{transform:translateY(0);}
-    100%{transform:translateY(50px);}
+@keyframes moveGrid {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(50px); }
 }
 
-.card{
-    position:relative;
-    padding:60px 80px;
-    background:rgba(255,255,255,0.05);
-    border:1px solid rgba(255,255,255,0.2);
-    backdrop-filter:blur(15px);
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 0 40px rgba(0,255,255,0.3);
-    animation:float 4s ease-in-out infinite;
+.card {
+    position: relative;
+    padding: 60px 80px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(0,255,255,0.3);
+    animation: float 4s ease-in-out infinite;
 }
 
-@keyframes float{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-15px);}
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
 }
 
-h1{
-    font-size:3.5rem;
-    letter-spacing:3px;
-    color:#00ffff;
-    text-shadow:0 0 20px #00ffff, 0 0 40px #00ffff;
-    margin-bottom:25px;
+h1 {
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    color: #00ffff;
+    text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+    margin-bottom: 25px;
 }
 
-p{
-    font-size:1.1rem;
-    line-height:1.8;
-    color:#e0f7ff;
-    max-width:500px;
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e0f7ff;
+    max-width: 500px;
 }
 
 .button {
-    display:inline-block;
-    margin-top:30px;
-    padding:15px 30px;
-    font-size:1.1rem;
-    font-weight:bold;
-    color:#00ffff;
-    border:2px solid #00ffff;
-    border-radius:10px;
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #00ffff;
+    border: 2px solid #00ffff;
+    border-radius: 10px;
     background: rgba(0,255,255,0.05);
-    text-decoration:none;
+    text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0 0 20px rgba(0,255,255,0.2);
+    animation: pulse 2s infinite;
 }
 
-.button:hover{
-    background:#00ffff;
-    color:#0f2027;
+.button:hover {
+    background: #00ffff;
+    color: #0f2027;
     box-shadow: 0 0 40px #00ffff, 0 0 60px #00ffff;
 }
 
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 20px rgba(0,255,255,0.2); }
+    50% { box-shadow: 0 0 40px rgba(0,255,255,0.5), 0 0 60px rgba(0,255,255,0.4); }
+}
+
 @media(max-width:768px){
-    .card{
-        padding:40px;
-    }
-    h1{
-        font-size:2.2rem;
-    }
+    .card { padding: 40px; }
+    h1 { font-size: 2.2rem; }
 }
 </style>
 </head>
@@ -112,13 +113,12 @@ p{
 <div class="card">
     <h1>Ataullah Ezatullah</h1>
     <p>
-        Life is a journey of growth, discipline, and vision.  
-        Every challenge is a level.  
-        Every failure is data.  
-        Every success is proof that persistence wins.  
+        Life is a journey of growth, discipline, and vision.<br>
+        Every challenge is a level.<br>
+        Every failure is data.<br>
+        Every success is proof that persistence wins.<br>
         Build your future. Stay focused. Move forward.
     </p>
-
     <a href="shad.html" class="button">Shad Click Here</a>
 </div>
 
